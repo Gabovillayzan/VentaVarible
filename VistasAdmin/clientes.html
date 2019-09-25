@@ -1,0 +1,38 @@
+﻿<script src="js/dataTable.js"/>
+<link href="css/dataTable.css" rel="stylesheet" />
+<script type="text/javascript" src="js/adminCliente.js"/>
+
+<div id="divCliente" style="width: 100%; overflow: auto;"></div>
+<input type="button" onclick="modalRegCliente()" value="Agregar Cliente" class="btn btn-primary"/>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 id="tituloModal" class="modal-title">.</h4>
+            </div>
+            <form id="form-cliente">
+            <div class="modal-body">                
+            <p><input name="id" id="id" type="number" class="form-control" placeholder="NUMERO DE RUC" min="99999999999" max="999999999"/></p>
+            <p><input name="razonSoc" id="razonSoc" type="text" class="form-control" placeholder="RAZON SOCIAL" style="text-transform:uppercase;" /></p>
+            <p><label>Estado:</label></p>
+            <p>
+                <select name="estado" id="estado" class="form-control">
+                    <option value="">SELECCIONE...</option>
+                    <option value="ACTIVO">ACTIVO</option>
+                    <option value="INACTIVO">INACTIVO</option>
+                </select>
+            </p>                
+            </div>
+            <div class="modal-footer">
+                <input id="btnValCliente" type="button" onclick="RegistrarClientes()" class="btn btn-success" value="Agregar" />
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+

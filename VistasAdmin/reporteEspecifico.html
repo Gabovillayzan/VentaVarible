@@ -1,0 +1,58 @@
+﻿<link href="css/dataTable.css" rel="stylesheet" />
+
+<div class="row">
+    <div class="col-md-3">
+        <select id="ReporteEspAeropuerto" class="form-control input-sm">
+            <option value="">AEROPUERTO</option>
+            <option value="TODO">TODOS </option>
+            <option value="CIX">Aeropuerto de Chiclayo </option>
+            <option value="CJA">Aeropuerto de Cajamarca</option>
+            <option value="HUZ">Aeropuerto de Anta     </option>
+            <option value="IQT">Aeropuerto de Iquitos  </option>
+            <option value="PCL">Aeropuerto de Pucallpa </option>
+            <option value="PIO">Aeropuerto de Pisco    </option>
+            <option value="PIU">Aeropuerto de Piura    </option>
+            <option value="TBP">Aeropuerto de Tumbes   </option>
+            <option value="TPP">Aeropuerto de Tarapoto </option>
+            <option value="TRU">Aeropuerto de Trujillo </option>
+            <option value="TYL">Aeropuerto de Talara   </option>
+            <option value="LIM">Sede Central </option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <select id="ReporteEspEmpresa" class="form-control input-sm"></select>
+    </div>
+    <div class="col-md-4">
+        <input type="month" class="form-control" name="fecha" id="fechaReporte" />
+    </div>
+    <div class="col-md-2">
+        <input type="button" class="btn sm btn-primary" value="Generar" onclick="ReporteEspecifico()" />
+    </div>
+</div>
+<hr />
+<div id="resultado" style="width: 100%; overflow: auto;">
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 id="tituloModal" class="modal-title">VENTA DIARIA</h4>
+            </div>
+            <div class="modal-body">
+                <div id="cuerpoModal" class="row" style="overflow: auto;">
+                    <div id="columnchart_values"></div>
+                </div>
+            </div>
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script src="js/adminReporteEspecifico.js"></script>
+<script src="js/dataTable.js"></script>
+

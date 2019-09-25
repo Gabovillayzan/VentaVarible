@@ -1,0 +1,18 @@
+.form-group > label{
+    color:white;
+}
+#formulario{
+    background-color: #337ab7;
+}
+#regHistorico > tr{
+    background-color: #a9afb5;
+    color: white;
+    font-weight: bold;
+}
+#nVentana > span{
+    color:white;opacity: 0.5;
+    margin-top:-5px;
+}
+    #nVentana > span:hover {
+    color:white;opacity: 1;
+    }

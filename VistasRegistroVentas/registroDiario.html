@@ -1,0 +1,129 @@
+﻿<div id="Div3">
+    <div class="row">
+        <div class="col-lg-8 col-lg-push-2">
+            <div class="form-group">
+                <label class="col-lg-4 control-label">SELECCIONA UNA FECHA:</label>
+                <div class="col-lg-6">
+                    <input name="fecha" type="date" id="Date1" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-push-2">
+            <table id="Table1" class="table">
+                <thead>
+                    <tr>
+                        <th>TIPO</th>
+                        <th>DESDE</th>
+                        <th>HASTA</th>
+                    </tr>
+                </thead>
+                <tbody id="Tbody1">
+                    <tr id="tr1">
+                        <td>Factura Manual</td>
+                        <td>
+                            <input type="number" min="0" class="form-control" id="Number1"></td>
+                        <td>
+                            <input type="number" min="0" class="form-control" id="Number2"></td>
+                    </tr>
+                    <tr id="tr2">
+                        <td>Boleta Manual</td>
+                        <td>
+                            <input type="number" min="0" class="form-control" id="Number3"></td>
+                        <td>
+                            <input type="number" min="0" class="form-control" id="Number4"></td>
+                    </tr>
+                    <tr id="tr3">
+                        <td>Vales</td>
+                        <td>
+                            <input type="number" min="0" class="form-control" id="Number5"></td>
+                        <td>
+                            <input type="number" min="0" class="form-control" id="Number6"></td>
+                    </tr>
+                    <tr id="tr4">
+                        <td>Ticket Boleta</td>
+                        <td>
+                            <input type="number" min="0" class="form-control" id="Number7"></td>
+                        <td>
+                            <input type="number" min="0" class="form-control" id="Number8"></td>
+                    </tr>
+                    <tr id="tr5">
+                        <td>Ticket Factura</td>
+                        <td>
+                            <input type="number" min="0" class="form-control" id="Number9"></td>
+                        <td>
+                            <input type="number" min="0" class="form-control" id="Number10"></td>
+                    </tr>
+                    <tr id="Tr6">
+                        <td></td>
+                        <td><b>TOTAL VENTA DIARIA (sin igv)</b></td>
+                        <td>
+                            <input type="number" min="0" style="width: 100%" class="form-control" id="monto"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <input type="button" id="agregar" value="agregar" onclick="cargaDiaria()" class="btn btn-info center-block">
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">        
+        <div class="table-responsive col-lg-10 col-lg-push-1">
+            <form class="form">
+            <div class="form-group">
+                <label class="label col-lg-2"></label>
+                <div class="col-lg-8">
+                    <input id="mesConsulta" type="month" class="form-control"  />
+                </div>
+                <div class="col-lg-2">
+                    <input type="button" name="btnFiltrar" class="form-control" value="Filtrar" onclick="itemsGuardados()" />
+                </div>
+            </div>
+        </form>
+            <table id="gVentaDiaria" class="table table-condensed table-hover">
+                <thead>
+                    <tr style="visibility: hidden">
+                        <th class="head">A</th>
+                        <th class="head">B</th>
+                        <th class="head">C</th>
+                        <th class="head">D</th>
+                        <th class="head">E</th>
+                        <th class="head">F</th>
+                        <th class="head">G</th>
+                        <th class="head">H</th>
+                        <th class="head">I</th>
+                        <th class="head">J</th>
+                        <th class="head">K</th>
+                        <th class="head">L</th>
+                        <th class="head">M</th>
+                        <th class="head">N</th>
+                        <th class="head">O</th>
+                        <th class="head">P</th>
+                        <th class="head">Q</th>
+                    </tr>
+                    <tr>
+                        <th>FECHA </th>
+                        <th colspan="2">FACTURA MANUAL</th>
+                        <th colspan="2">BOLETA MANUAL</th>
+                        <th colspan="2">VALES</th>
+                        <th colspan="2">TICKET BOLETA</th>
+                        <th colspan="2">TICKET FACTURA</th>
+                        <th>MONTO</th>
+                        <th>OPCIONES</th>
+                    </tr>
+                </thead>
+                <tbody id="ventaDiaria">
+                </tbody>
+                <tfoot id="regHistorico">
+                    <tr style="background-color: #2E6DA4; color: white; font-weight: bold">
+                        <td colspan="11" >TOTAL</td>
+                        <td id="totalReg" colspan="2"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="js/registroDiario.js"></script>

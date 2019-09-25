@@ -1,0 +1,75 @@
+﻿<script src="js/dataTable.js" />
+<link href="css/dataTable.css" rel="stylesheet" />
+<script type="text/javascript" src="js/adminUsuario.js" />
+<div id="divUsuario" style="width: 100%; overflow: auto;"></div>
+
+<input type="button" onclick="modalRegUsuario();" value="Agregar Usuario" class="btn btn-primary" />
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 id="tituloModal" class="modal-title">REGISTRAR USUARIO</h4>
+            </div>
+            <div class="modal-body">
+                <form id="form-usuario">
+                    <div class="form-group">
+                        <label for ="aeropuerto">AEROPUERTO</label>
+                        <select id="aeropuerto" class="form-control" id="aeropuerto" name="aeropuerto" onchange="generarIdUsuario();">
+                            <option value="">SELECCIONE...</option>
+                            <option value="CIX">Aeropuerto de Chiclayo </option>
+                            <option value="CJA">Aeropuerto de Cajamarca</option>
+                            <option value="HUZ">Aeropuerto de Anta     </option>
+                            <option value="IQT">Aeropuerto de Iquitos  </option>
+                            <option value="LIM">Sede Central  </option>
+                            <option value="PCL">Aeropuerto de Pucallpa </option>
+                            <option value="PIO">Aeropuerto de Pisco    </option>
+                            <option value="PIU">Aeropuerto de Piura    </option>
+                            <option value="TBP">Aeropuerto de Tumbes   </option>
+                            <option value="TPP">Aeropuerto de Tarapoto </option>
+                            <option value="TRU">Aeropuerto de Trujillo </option>
+                            <option value="TYL">Aeropuerto de Talara   </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="slcEmpresa">EMPRESA</label>
+                        <select class="form-control" id="slcEmpresa" name="razonSoc" onchange="generarIdUsuario();">
+                            <option>SELECCIONE...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="id" name="id" class="form-control" placeholder="CREAR UN ID" style="text-transform: uppercase;" />
+                        <input type="text" id="usuario" name="usuario" class="form-control" placeholder="NOMBRE DE USUARIO" style="text-transform: uppercase;" onkeyup="replicar();" />
+                        <input type="password" id="pw" name="pass" class="form-control" placeholder="CONTRASEÑA" style="text-transform: uppercase;" />
+                    </div>
+                    <div class="form-group">
+                        <label for="nivel">TIPO</label>
+                        <select id="nivel" name="nivel" class="form-control">
+                            <option value="">SELECCIONE...</option>
+                            <option value="ESTANDAR">ESTANDAR</option>
+                            <option value="ADMIN">ADMINISTRADOR</option>
+                            <option value="AUDITOR">AUDITOR</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exonerado">EXONERADO IGV</label>
+                        <select id="exonerado" name="exonerado" class="form-control">
+                            <option value="">SELECCIONE...</option>
+                            <option value="SI">SI</option>
+                            <option value="NO">NO</option>
+                        </select>
+                        <textarea class="form-control" id="descripcion" name="descripcion"  placeholder="DESCRIPCION" style="text-transform: uppercase;" />
+                        <input class="form-control" id="encargado" name="encargado" type="text" placeholder="NOMBRE ENCARGADO" style="text-transform: uppercase;" />
+                        <input class="form-control" id="correo" name="correo" type="text" placeholder="CORREO@EJEMPLO.COM" style="text-transform: uppercase;" />
+                         <input class="form-control" id="telefono" name="telefono" type="text" placeholder="TELEFONO" style="text-transform: uppercase;"/>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <input type="button" id="btnRegistrarCliente" class="btn btn-success" value="Agregar" />
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

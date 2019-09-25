@@ -1,0 +1,13 @@
+﻿#myLogin > div {
+    margin-top:12%;
+}
+/*#cabecera {
+color:gray;
+background-color:darkblue;
+}*/
+.modal-content {
+    background-color: #f7f7f7;
+}
+.modal-body {
+    background-color: white;
+}

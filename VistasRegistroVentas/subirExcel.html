@@ -1,0 +1,44 @@
+﻿<div id="Div1" runat="server">
+                            <a href="Formato/ADP.xls">Descarga el formato Excel<img src="img/Excel-icon.png" /></a>
+                            <form id="Form1" runat="server">
+                                <div id="botones" class="text-center">
+                                    <div style="width: 150px; margin: auto">
+                                        <label>Seleccion un año:</label>
+                                        <select class="form-control input-sm" id="años" runat="server">
+                                            <option>Seleccione</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2016">2016</option>
+                                        </select>
+                                        <label>Seleccione un mes:</label>
+                                        <select class="form-control input-sm" id="meses" runat="server">
+                                            <option>Seleccione</option>
+                                            <option value="01">Enero</option>
+                                            <option value="02">Febrero</option>
+                                            <option value="03">Marzo</option>
+                                            <option value="04">Abril</option>
+                                            <option value="05">Mayo</option>
+                                            <option value="06">Junio</option>
+                                            <option value="07">Julio</option>
+                                            <option value="08">Agosto</option>
+                                            <option value="09">Setiembre</option>
+                                            <option value="10">Octubre</option>
+                                            <option value="11">Noviembre</option>
+                                            <option value="12">Diciembre</option>
+                                        </select>
+                                    </div>
+                                    <div class="fileUpload btn btn-default btn-sm">
+                                        <span>
+                                            <img src="img/Excel-icon.png" />
+                                            Cargar archivo</span>
+                                        <input type="file" class="upload" runat="server" id="subir" onchange="nombreExcel(this.value)"/>
+                                    </div>
+                                    <center><label id="nomDocumento" runat="server"></label></center>
+                                    <input type="text" ID="Button1" Text="Subir Excel" OnClick="ConsultarDatos" CssClass="btn btn-primary btn-sm" runat="server" />
+                                </div>
+                                    <div id="tablaResult">                                        
+                                        <div id="tablaResultado" runat="server"  style="margin-top:15px;">                                          
+                                            
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>

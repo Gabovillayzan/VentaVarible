@@ -1,0 +1,29 @@
+﻿
+<div class="row">
+    <div class="col-lg-8 col-lg-push-2 col-md-8 col-md-push-2" style="margin-bottom: 20px;">
+        <form class="form">
+            <div class="form-group">
+                <label class="col-lg-3 control-label" for="mesReporte">Selecciones un mes:</label>
+                <div class="col-lg-5">
+                    <input id="mesReporte" type="month" name="mesReporte" class="form-control" />
+                </div>
+                <div class="col-md-2">
+                    <input type="button" id="Button1" onclick="validar()" class="btn btn-primary center-block" value="Validar">
+                </div>
+                <div class="col-md-2">
+                    <input type="button" id="Button2" class="btn btn-success center-block" disabled value="Enviar">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-12" overflow: auto;">
+        <img src="img/cabecera.png" style="width: 100%;">
+        <div id="example" class="width:98%;margin-left:2%;height:600px;overflow-x: auto">
+        </div>
+    </div>
+</div>
+
+<script src="js/TableJson.js"></script>
+<script type="text/javascript" src="js/handsontable.full.js"></script>
+<link rel="stylesheet" media="screen" href="css/handsontable.full.min.css" />
+<script type="text/javascript" src="js/excelWeb.js"></script>
